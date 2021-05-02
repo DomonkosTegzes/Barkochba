@@ -1,0 +1,10 @@
+Start
+Think of something or someone and answer my questions. Ferfi?
+yes
+>21?
+yes
+>30?
+no
+Let me guess, is it Marci?
+yes
+That's great, good bye

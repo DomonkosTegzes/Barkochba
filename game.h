@@ -6,6 +6,11 @@
 #include "knowledge.h"
 #include <iostream>
 
+#define MENU 0
+#define PLAYING 1
+#define LEARNING 2
+
+
 using namespace std;
 
 /**
@@ -14,24 +19,28 @@ using namespace std;
 class Game{
 private:
     ///Decides whether the program is currently playing or learning.
-    bool playing;
-    istream& is;
-    ostream& os;
+    int gameStage;
     Node* tree;
     Node* currentNode;
-    bool getBinaryAnswer();
+    int learningStage;
+    string nodeMessage(Node* node);
+    string menuStep(bool binaryInput);
+    string playingStep(bool binaryInput);
+    string learningStep(string userInput);
+
 public:
     /**
     *Creates a new game.
     */
-    Game(string knowledgeFile, istream& is, ostream& os);
+    Game(string knowledgeFile);
     ~Game();
     /**
      *Performs one question and answer step.
      *@param userInput The input entered by the user.
      *@return reaction to the user's input.
      */
-    void play();
+    string step(string userInput);
+
 };
 
 
