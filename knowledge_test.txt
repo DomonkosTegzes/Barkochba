@@ -8,9 +8,7 @@
                         -Volleyball
                         ?Is it played in the water?
                             -Water polo
-                            ?Is there a goalkeeper in this game?
-                                -Handball
-                                -Basketball
+                            -Handball
                     -Soccer
             -Ice hockey
         -Athletics

@@ -2,7 +2,7 @@
 #define GAME_H_INCLUDED
 
 #include <string>
-//#include "memtrace.h"
+#include "memtrace.h"
 #include "knowledge.h"
 #include <iostream>
 
@@ -23,16 +23,18 @@ private:
     Node* tree;
     Node* currentNode;
     int learningStage;
+    bool autoSave;
     string nodeMessage(Node* node);
     string menuStep(bool binaryInput);
     string playingStep(bool binaryInput);
     string learningStep(string userInput);
 
+
 public:
     /**
     *Creates a new game.
     */
-    Game(string knowledgeFile);
+    Game(string knowledgeFile, bool autoSave);
     ~Game();
     /**
      *Performs one question and answer step.

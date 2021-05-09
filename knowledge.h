@@ -2,7 +2,7 @@
 #define KNOWLEDGE_H_INCLUDED
 
 #include <string>
-
+#include "memtrace.h"
 #define INDENTATION 4
 
 using namespace std;

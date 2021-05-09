@@ -33,3 +33,6 @@
 
 # Codeblocks
 *.depend
+
+# Doxygen
+rtf

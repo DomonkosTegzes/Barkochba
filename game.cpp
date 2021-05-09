@@ -4,7 +4,8 @@
 #include <fstream>
 
 
-Game::Game(string knowledgeFile): gameStage(MENU), currentNode(nullptr), learningStage(0){
+Game::Game(string knowledgeFile, bool autoSave): gameStage(MENU), currentNode(nullptr),
+                                                 learningStage(0), autoSave(autoSave){
     tree = new Node("");
     ifstream ifs;
     ifs.open(knowledgeFile);
@@ -17,7 +18,7 @@ Game::~Game(){
 
 string Game::nodeMessage(Node* node){
     if(node->isLeaf()){
-        return "Let me guess, is it " + node->text + "?";
+        return "Let me guess, it's: " + node->text + ". Is that right?";
     } else {
         return node->text;
     }
@@ -76,12 +77,15 @@ string Game::learningStep(string userInput){
         return "Please enter the solution in case the answer to this question is no";
     } else if(learningStage == 2){
         currentNode->no = new Node(userInput);
-        ofstream ofs;
-        ofs.open("knowledge.txt");
-        tree->writeNode(ofs, 0);
+        if(autoSave){
+            ofstream ofs;
+            ofs.open("knowledge.txt");
+            tree->writeNode(ofs, 0);
+        }
         gameStage = MENU;
         return "Thanks I will remember it next time. Want to play another one?";
     }
+    return "Ooops something went wrong";
 }
 
 string Game::menuStep(bool binaryInput){

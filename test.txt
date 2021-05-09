@@ -1,10 +1,46 @@
-Start
-Think of something or someone and answer my questions. Ferfi?
 yes
->21?
-yes
->30?
-no
-Let me guess, is it Marci?
-yes
-That's great, good bye
+Think of something or someone and answer my questions. Is it some kind of sport?
+y
+Is it a team sport?
+y
+Is it played with a ball?
+y
+Is the ball egg-shaped?
+n
+Do you primarily touch the ball with your hand?
+y
+Is there a net in the middle of the field?
+n
+Is it played in the water?
+n
+Let me guess, it's: Handball. Is that right?
+n
+Too bad... What should I have asked at this point? Please enter a question
+Is there a goalkeeper in this game?
+Please enter the solution in case the answer to this question is yes
+Handball
+Please enter the solution in case the answer to this question is no
+Basketball
+Thanks I will remember it next time. Want to play another one?
+y
+Think of something or someone and answer my questions. Is it some kind of sport?
+y
+Is it a team sport?
+y
+Is it played with a ball?
+y
+Is the ball egg-shaped?
+n
+Do you primarily touch the ball with your hand?
+y
+Is there a net in the middle of the field?
+n
+Is it played in the water?
+n
+Is there a goalkeeper in this game?
+n
+Let me guess, it's: Basketball. Is that right?
+y
+That's great, want to play another one?
+n
+Thanks, good bye

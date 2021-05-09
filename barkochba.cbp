@@ -23,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-DMEMTRACE" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -34,8 +35,11 @@
 				<Option object_output="obj/Test/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option host_application="bin/Test/barkochba.exe" />
+				<Option run_host_application_in_terminal="1" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DMEMTRACE" />
 					<Add directory="include" />
 				</Compiler>
 			</Target>
@@ -48,14 +52,18 @@
 		<Unit filename="game.h" />
 		<Unit filename="knowledge.cpp" />
 		<Unit filename="knowledge.h" />
+		<Unit filename="knowledge.txt" />
+		<Unit filename="knowledge_test.txt" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="memtrace.cpp" />
+		<Unit filename="memtrace.h" />
 		<Unit filename="test.cpp">
 			<Option target="Test" />
 		</Unit>
-		<Unit filename="test1.txt" />
+		<Unit filename="test.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />

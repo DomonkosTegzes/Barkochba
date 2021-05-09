@@ -3,6 +3,7 @@
 
 #include "game.h"
 #include "knowledge.h"
+#include "memtrace.h"
 
 
 using namespace std;
@@ -12,7 +13,7 @@ int main()
     cout << "START TESTING" << endl;
     ifstream ifs;
     ifs.open("test.txt");
-    Game game("knowledge.txt");
+    Game game("knowledge_test.txt", false);
     string response = "";
     string userInput;
     string expectedResponse;

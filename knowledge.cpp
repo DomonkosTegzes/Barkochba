@@ -2,13 +2,11 @@
 #include "knowledge.h"
 
 
-//#include "memtrace.h"
+#include "memtrace.h"
 
 
 
-Node::Node(string text): text(text), yes(NULL), no(NULL){
-    cout << "CREATE NODE " << this->text << endl;
-    }
+Node::Node(string text): text(text), yes(NULL), no(NULL){}
 
 Node::~Node(){
     delete this->yes;
@@ -41,8 +39,6 @@ void Node::writeNode(std::ostream& os, int depth){
         this->no->writeNode(os, depth + 1);
     }
 }
-
-
 
 void Node::readNode(std::istream& is){
     char c = ' ';
